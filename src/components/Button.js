@@ -11,7 +11,7 @@ export class Button extends Component {
 			<button className={`ui button ${color}`}>
 				{/* consumer get provider data, always passed a function. Value is first argument. */}
 				<LanguageContext.Consumer>
-					{(value) => (value === 'english' ? 'Sumbit' : 'Vorleggen')}
+					{({ language }) => (language === 'english' ? 'Sumbit' : 'Vorleggen')}
 				</LanguageContext.Consumer>
 			</button>
 		);
